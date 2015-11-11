@@ -1,0 +1,26 @@
+<div class="col-md-5">
+  <h3>Edit Note</h3>
+  <div class="alert alert-danger" role="alert" ng-show="message">{{ message }}</div>
+  <form ng-controller="NoteEditController" ng-submit="processForm()">
+    <div class="form-group">
+      <label>Date</label>
+      <input type="date" class="form-control" placeholder="Date" ng-model="note.date" />
+    </div>
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" placeholder="Name" ng-model="note.name"/>
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <textarea class="form-control" placeholder="Description" rows="3" ng-model="note.description" ng-class="{ 'has-error' : errorDescription }"></textarea>
+      <span class="help-block" ng-show="errorDesription">{{ errorDescription }}</span>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ng-model="note.done"> Done
+      </label>
+    </div>
+    <a href="#notes" class="btn btn-danger">Cancel</a>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

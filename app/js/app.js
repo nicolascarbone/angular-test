@@ -1,0 +1,1 @@
+App.NotesApp = angular.module('NotesApp', ['ngRoute']);

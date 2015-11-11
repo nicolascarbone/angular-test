@@ -1,0 +1,26 @@
+<h3>
+  Notes
+  <a href="#add" class="btn btn-success pull-right">Add</a>
+</h3>
+<ul class="notes" ng-controller="NoteController">
+  <li ng-repeat="note in notes | filter: {done: false} | orderBy:orderProp" >
+    <div class="panel panel-success text-center">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          {{note.date | date : 'd' }} {{note.date | date : 'EEE' }}
+          <span class="pull-right">
+            <a href='#/notes/{{ note.id }}' ><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href='#' title="Add to Board"><span class="glyphicon glyphicon-pushpin"></span></a>
+          </span>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <div><img ng-src="{{note.imageUrl}}" class="rounded-image" /></div>
+        <div>{{note.name}}</div>
+        <div class="pull-right">
+          <a href='#' ng-click="markAsDone()"><span class="glyphicon glyphicon-ok"></span></a>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>

@@ -1,0 +1,29 @@
+[
+    {
+        "id": "note-1",
+        "imageUrl": "img/1.jpg",
+        "name": "Go Running",
+        "description": "Go Running dec",
+        "date": "2015-06-21",
+        "done": true,
+        "pinned": false
+    },
+    {
+        "id": "note-2",
+        "imageUrl": "img/2.jpg",
+        "name": "Go Shopping",
+        "description": "Go Running dec",
+        "date": "2015-06-19",
+        "done": false,
+        "pinned": false
+    },
+    {
+        "id": "note-3",
+        "imageUrl": "img/3.jpg",
+        "name": "Change Guitar Strings",
+        "description": "Go Running dec",
+        "date": "2015-06-20",
+        "done": false,
+        "pinned": false
+    }
+]
